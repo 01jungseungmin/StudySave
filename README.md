@@ -8,6 +8,6 @@
 * * *
 [전승민](https://github.com/01jungseungmin/StudySave.git "github link")
 * * *
-[박종혁][]
+[박종혁](https://github.com/Parkjonghyeok2/StudySave.git "github link")
 * * *
 [조다운][]
