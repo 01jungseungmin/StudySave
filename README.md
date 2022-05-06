@@ -10,4 +10,4 @@
 * * *
 [박종혁](https://github.com/Parkjonghyeok2/StudySave.git "github link")
 * * *
-[조다운][]
+[조다운](https://github.com/jodawoon/Java-DataBase "github link")
