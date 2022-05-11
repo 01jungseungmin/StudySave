@@ -2,6 +2,6 @@ package Q1;
 
 public interface IScheduleSet {
     public Schedule[] makeSchedule();
-    public void sreachSchedule(Schedule[] schedule,int day);
+    public void sreachSchedule(Schedule[] schedule, String day);
 
 }

@@ -13,16 +13,25 @@ abstract public class ScheduleSet implements IScheduleSet{
         Schedule[] sd = new Schedule[count];
 
         for (int i = 0; i < sd.length; i++) {
-            System.out.println(i+1 + "일");
             String[] str = getString();
-            sd[i] = (str[1].isEmpty()) ? new Schedule(str[0]) : new Schedule(str[0], str[1]);
+            sd[i] = (str[2].isEmpty()) ? new Schedule(str[0], str[1]) : new Schedule(str[0], str[1], str[2]);
         }
         return sd;
     }
 
     @Override
-    public void sreachSchedule(Schedule[] schedule,int day) {
-        System.out.println("날짜 : " + day + "\n스케줄 : " + schedule[day-1].getSchedule() + "\n장소 : " + schedule[day-1].getPlace());
+    public void sreachSchedule(Schedule[] schedule, String day) {
+        boolean nullIt = true;
+        for (int i = 0; i < schedule.length; i++) {
+            if (schedule[i].getDay().equals(day)) {
+                nullIt = false;
+                System.out.println("\n일자 : " + schedule[i].getDay() + "\n스케줄 : " 
+                + schedule[i].getSchedule() + "\n장소 : " + schedule[i].getPlace() + "\n");
+            }
+        }
+        if(nullIt){
+            System.out.println("\n해당 일자에 스케줄이 존재하지 않습니다.\n");
+        }
     }
 
     abstract public String[] getString();

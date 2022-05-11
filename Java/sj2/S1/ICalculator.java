@@ -1,7 +1,7 @@
-package S1;
+package sj2.S1;
 
 public interface ICalculator {
-    public String returnMath();
-    public int[] returnOperator();
-    public int calculatedValue();
+    public String returnFormula();
+    public int[] returnOperator(String formula);
+    public double calculatedValue(String formula, int[] operator);
 }
