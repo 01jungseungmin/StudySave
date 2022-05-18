@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class FindApproximateValue implements IGameFrame{
 
     @Override
-    public String computerSelect() {
+    public <T> T  computerSelect() {
         Random random = new Random();
 
-        return Integer.toString(random.nextInt(99)+1);
+        return (T) (Integer.valueOf(random.nextInt(99)+1));
     }
 
     @Override
-    public String userSelect() {
+    public <T> T  userSelect() {
         Scanner scanner = new Scanner(System.in);
         int num;
 
@@ -29,7 +29,7 @@ public class FindApproximateValue implements IGameFrame{
             }
         }
 
-        return Integer.toString(num);
+        return (T) Integer.valueOf(num);
     }
 
     @Override

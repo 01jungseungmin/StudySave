@@ -6,20 +6,20 @@ import java.util.Scanner;
 public class RockPaperScissors implements IGameFrame {
 
     @Override
-    public String computerSelect() {
+    public <T> T  computerSelect() {
         Random random = new Random();
         int selectNum = random.nextInt(2);
-        String select = "";
+        T select = (T) "";
         
         switch (selectNum) {
             case 0:
-                select = "가위";
+                select = (T) "가위";
                 break;
             case 1:
-                select = "바위";
+                select = (T) "바위";
                 break;
             case 2:
-                select = "보";
+                select = (T) "보";
                 break;
         }
 
@@ -27,7 +27,7 @@ public class RockPaperScissors implements IGameFrame {
     }
 
     @Override
-    public String userSelect() {
+    public <T> T  userSelect() {
         Scanner scanner = new Scanner(System.in);
         String select = "";
 
@@ -44,7 +44,7 @@ public class RockPaperScissors implements IGameFrame {
             }
         }
 
-        return select;
+        return (T) select;
     }
 
     @Override

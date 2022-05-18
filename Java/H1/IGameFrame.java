@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public interface IGameFrame {
 
-    public String computerSelect();
-    public String userSelect();
+    public <T> T computerSelect();
+    public <T> T userSelect();
 
     public boolean gameAct();
     
