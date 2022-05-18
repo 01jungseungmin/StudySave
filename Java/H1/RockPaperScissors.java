@@ -3,7 +3,7 @@ package H1;
 import java.util.Random;
 import java.util.Scanner;
 
-public class RockPaperScissors implements IRockPaperScissors {
+public class RockPaperScissors implements IGameFrame {
 
     @Override
     public String computerSelect() {

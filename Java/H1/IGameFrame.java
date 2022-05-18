@@ -1,6 +1,6 @@
 package H1;
 
-public interface IRockPaperScissors {
+public interface IGameFrame {
 
     public String computerSelect();
     public String userSelect();
