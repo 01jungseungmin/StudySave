@@ -38,8 +38,8 @@ public class FindApproximateValue implements IGameFrame{
         Random random = new Random();
 
         while (true) {
-            int user = Integer.parseInt(userSelect());
-            int computer = Integer.parseInt(computerSelect());
+            int user = userSelect();
+            int computer = computerSelect();
 
             int value = random.nextInt(99) + 1;
 
