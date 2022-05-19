@@ -6,7 +6,7 @@
 * * *
 [윤홍빈](https://github.com/YoonBeen/2bStudy.git "github link")
 * * *
-[전승민](https://github.com/01jungseungmin/StudySave.git "github link")
+[정승민](https://github.com/01jungseungmin/StudySave.git "github link")
 * * *
 [박종혁](https://github.com/Parkjonghyeok2/StudySave.git "github link")
 * * *
