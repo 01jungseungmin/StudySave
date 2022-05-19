@@ -9,21 +9,21 @@ public class RockPaperScissors implements IGameFrame {
     public <T> T  computerSelect() {
         Random random = new Random();
         int selectNum = random.nextInt(2);
-        T select = (T) "";
+        String select = "";
         
         switch (selectNum) {
             case 0:
-                select = (T) "가위";
+                select = "가위";
                 break;
             case 1:
-                select = (T) "바위";
+                select = "바위";
                 break;
             case 2:
-                select = (T) "보";
+                select = "보";
                 break;
         }
 
-        return select;
+        return (T) select;
     }
 
     @Override
