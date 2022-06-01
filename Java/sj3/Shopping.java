@@ -1,8 +1,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import javax.swing.text.Caret;
-
 public class Shopping {
     Scanner scanner = new Scanner(System.in);
     LinkedList<Cart> cartArray = new LinkedList<Cart>();
@@ -20,11 +18,12 @@ public class Shopping {
         System.out.print("--------------------\n(임대)사용자 이름 입력 : ");
         String name = scanner.next();
 
-        for (int i = 0; i < cartArray.size(); i++) {
-            if (cartArray.get(i).getName().equals(name)) {
-                return cartArray.get(i);
+        for (Cart cart : cartArray) {
+            if (cart.getName().equals(name)) {
+                return cart;
             }
         }
+
         Cart cart = new Cart(name);
         cartArray.add(cart);
         return cart;
@@ -34,9 +33,11 @@ public class Shopping {
         System.out.print("--------------------\n(반납)사용자 이름 입력 : ");
         String name = scanner.next();
 
-        for (int i = 0; i < cartArray.size(); i++) {
-            if (cartArray.get(i).getName().equals(name))
-                cartArray.remove(i);
+        for (Cart cart : cartArray) {
+            if (cart.getName().equals(name)){
+                cartArray.remove(cart);
+                break;
+            }
         }
     }
 
