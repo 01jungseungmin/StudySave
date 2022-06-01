@@ -27,7 +27,7 @@ public class Cart {
     public void updateCart(String itemName, int itemCount) {
         for (Item item : itemArray) {
             if (item.getName().equals(itemName)) {
-                item.setCount(item.getCount() + itemCount);
+                item.setCount(itemCount);
             }
         }
     }

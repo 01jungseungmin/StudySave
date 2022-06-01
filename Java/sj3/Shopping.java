@@ -42,7 +42,7 @@ public class Shopping {
     }
 
     public int cartMenu() {
-        System.out.print("--------------------\n1. 카트에 상품 추가\n2. 카트에 수량 추가\n3. 카트 상품 제거\n4. 카트 상품 출력\n5. 카트 관련 동작 종료\n카트 동작 입력 : ");
+        System.out.print("--------------------\n1. 카트에 상품 추가\n2. 카트에 수량 변경\n3. 카트 상품 제거\n4. 카트 상품 출력\n5. 카트 관련 동작 종료\n카트 동작 입력 : ");
         return scanner.nextInt();
     }
 
