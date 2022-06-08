@@ -1,8 +1,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import javax.swing.text.Caret;
-
 public class Shopping {
     Scanner scanner = new Scanner(System.in);
     LinkedList<Cart> cartArray = new LinkedList<Cart>();
@@ -20,11 +18,12 @@ public class Shopping {
         System.out.print("--------------------\n(임대)사용자 이름 입력 : ");
         String name = scanner.next();
 
-        for (int i = 0; i < cartArray.size(); i++) {
-            if (cartArray.get(i).getName().equals(name)) {
-                return cartArray.get(i);
+        for (Cart cart : cartArray) {
+            if (cart.getName().equals(name)) {
+                return cart;
             }
         }
+
         Cart cart = new Cart(name);
         cartArray.add(cart);
         return cart;
@@ -34,14 +33,16 @@ public class Shopping {
         System.out.print("--------------------\n(반납)사용자 이름 입력 : ");
         String name = scanner.next();
 
-        for (int i = 0; i < cartArray.size(); i++) {
-            if (cartArray.get(i).getName().equals(name))
-                cartArray.remove(i);
+        for (Cart cart : cartArray) {
+            if (cart.getName().equals(name)){
+                cartArray.remove(cart);
+                break;
+            }
         }
     }
 
     public int cartMenu() {
-        System.out.print("--------------------\n1. 카트에 상품 추가\n2. 카트에 수량 추가\n3. 카트 상품 제거\n4. 카트 상품 출력\n5. 카트 관련 동작 종료\n카트 동작 입력 : ");
+        System.out.print("--------------------\n1. 카트에 상품 추가\n2. 카트에 수량 변경\n3. 카트 상품 제거\n4. 카트 상품 출력\n5. 카트 관련 동작 종료\n카트 동작 입력 : ");
         return scanner.nextInt();
     }
 

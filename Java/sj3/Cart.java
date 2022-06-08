@@ -13,31 +13,29 @@ public class Cart {
     }
 
     public void addCart(String itemName, int itemPrice, int itemCount) {
-        boolean notIn = true;
 
-        for (int i = 0; i < itemArray.size(); i++) {
-            if (itemArray.get(i).getName().equals(itemName)) {
-                itemArray.get(i).setCount(itemArray.get(i).getCount() + itemCount);
-                notIn = false;
+        for (Item item : itemArray) {
+            if (item.getName().equals(itemName)) {
+                item.setCount(item.getCount() + itemCount);
+                return;
             }
         }
 
-        if (notIn)
-            itemArray.add(new Item(itemName, itemPrice, itemCount));
+        itemArray.add(new Item(itemName, itemPrice, itemCount));
     }
 
     public void updateCart(String itemName, int itemCount) {
-        for (int i = 0; i < itemArray.size(); i++) {
-            if (itemArray.get(i).getName().equals(itemName)) {
-                itemArray.get(i).setCount(itemArray.get(i).getCount() + itemCount);
+        for (Item item : itemArray) {
+            if (item.getName().equals(itemName)) {
+                item.setCount(itemCount);
             }
         }
     }
 
     public void removeCart(String itemName) {
-        for (int i = 0; i < itemArray.size(); i++) {
-            if (itemArray.get(i).getName().equals(itemName)) {
-                itemArray.remove(i);
+        for (Item item : itemArray) {
+            if (item.getName().equals(itemName)) {
+                itemArray.remove(item);
             }
         }
     }
@@ -50,11 +48,11 @@ public class Cart {
         System.out.println("--------------------");
         if (itemArray.isEmpty())
             System.out.println("상품이 존재하지 않습니다.");
-        for (int i = 0; i < itemArray.size(); i++) {
+        for (Item item : itemArray) {
             System.out.println( "\n" +
-                "\n상품 이름 : " + itemArray.get(i).getName() + 
-                "\n상품 가격 : " + itemArray.get(i).getPrice() + 
-                "\n상품 수량 : " + itemArray.get(i).getCount());
+                "\n상품 이름 : " + item.getName() + 
+                "\n상품 가격 : " + item.getPrice() + 
+                "\n상품 수량 : " + item.getCount());
         }
     }
 }
